@@ -2,11 +2,13 @@
 
 ## Description of the Problem :
 - Access to safe drinking-water is essential to health, a basic human right and a component of effective policy for health protection. This is important as a health and development issue at a national, regional and local level. In some regions, it has been shown that investments in water supply and sanitation can yield a net economic benefit, since the reductions in adverse health effects and health care costs outweigh the costs of undertaking the interventions.
+
 (For more information read this dataset on Kaggle - https://www.kaggle.com/datasets/adityakadiwal/water-potability )
 
 ### Content of the dataset 
 
 The water_potability.csv file contains water quality metrics for 3276 different water bodies.
+
 **1. pH value:**
 
 PH is an important parameter in evaluating the acid–base balance of water. It is also the indicator of acidic or alkaline condition of water status. WHO has recommended maximum permissible limit of pH from 6.5 to 8.5. The current investigation ranges were 6.52–6.83 which are in the range of WHO standards.
@@ -61,13 +63,12 @@ Indicates if water is safe for human consumption where 1 means Potable and 0 mea
 
 3 ) shh into the EC2 instance from your local machine using the key which was generated during the EC2 creation
 - After SSH into your remote EC2 machine, run these commands
-- 
+
 4 ) `sudo su -` 
 
 5 ) `yum update -y` 
 
 6 ) `yum install docker`
-
 
 7 ) `systemctl start docker`
 
@@ -77,31 +78,45 @@ Indicates if water is safe for human consumption where 1 means Potable and 0 mea
 
 10 ) `yum install git -y`
 
-11 ) Clone the repository using --> git clone https://github.com/modfa/Water_Quality_Check_ML_Project.git
+11 ) Clone the repository using --> `git clone https://github.com/modfa/Water_Quality_Check_ML_Project.git`
 
 
 12 ) `cd Water_Quality_Check_ML_Project`
 
 13 ) To build the image for running the container
+
         `docker build -t projectimage .`
+        
      Command to run the docker container
+     
         `docker run -it -p 9696:9696 --rm projectimage:latest`
         
 14 ) update the `predict_test.py` file and change it to 
+
 `url = 'http://{your_ec2_instance_public_ip_address}:9696/predict'`  # {43.204.148.161} This is the public IP for your EC2 instance and you have to change it your assigned public IP address
 
-15 ) Now run the python `predict_test.py` file from your local system using `python predict_test.py` and you will see the prediciton from the model which has been deployed on Docker Container on EC2
+15 ) Now run the python `predict_test.py` file from your local system (terminal) using `python predict_test.py` and you will see the prediciton from the model which has been deployed on Docker Container on EC2
 
 
 ### To Run/Deploy the Project Locally on docker container -
+
 1 ) Make sure your system has python > 3.9 version installed
+
 2 ) Docker installed and running/active
+
 3 ) Git installed
-4 ) Clone the repository using --> git clone https://github.com/modfa/Water_Quality_Check_ML_Project.git
+
+4 ) Clone the repository using --> `git clone https://github.com/modfa/Water_Quality_Check_ML_Project.git` 
+
 5 ) `cd Water_Quality_Check_ML_Project`
+
 6 ) To build the image for running the container
         `docker build -t projectimage .`
+        
 7 ) Command to run the docker container
         `docker run -it -p 9696:9696 --rm projectimage:latest`
+        
 8 ) Update the `predict_test.py` file and change it to localrun on local host/uncomment the line (read the file for more)
+
 9 ) Now run the python `predict_test.py` file from your local system using `python predict_test.py` and you will see the prediciton from the model which has been deployed on Docker Container on EC2
+
