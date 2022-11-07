@@ -91,11 +91,11 @@ Indicates if water is safe for human consumption where 1 means Potable and 0 mea
 
 13 ) To build the image for running the container
 
-        `docker build -t projectimage .`
-        
-     Command to run the docker container
+`docker build -t projectimage .`
+
+Command to run the docker container
      
-        `docker run -it -p 9696:9696 --rm projectimage:latest`
+`docker run -it -p 9696:9696 --rm projectimage:latest`
         
 14 ) update the `predict_test.py` file and change it to 
 
