@@ -4,6 +4,7 @@
 - Access to safe drinking-water is essential to health, a basic human right and a component of effective policy for health protection. This is important as a health and development issue at a national, regional and local level. In some regions, it has been shown that investments in water supply and sanitation can yield a net economic benefit, since the reductions in adverse health effects and health care costs outweigh the costs of undertaking the interventions.
 
 (For more information read this dataset on Kaggle - https://www.kaggle.com/datasets/adityakadiwal/water-potability )
+(The downloaded data is already available in `data` directory and trained model in `model` directory)
 
 **We used different Machine Learning algorithms(Logistic Regression, Decision Trees, Random Forest Classifier, Gradient Bossting Decision Trees etc to predict if the given water sample is potable or not? and also deploy that service to EC2 instance in Docker container**
 
