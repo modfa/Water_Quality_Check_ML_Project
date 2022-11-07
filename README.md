@@ -125,3 +125,5 @@ Indicates if water is safe for human consumption where 1 means Potable and 0 mea
 
 9 ) Now run the python `predict_test.py` file from your local system using `python predict_test.py` and you will see the prediciton from the model which has been deployed on Docker Container on EC2
 
+
+###  Note: This repository include the `notebook.ipynb` , `train.py` , `predict.py` , `Dockerfile` etc if you want to explore the project in much more details.
