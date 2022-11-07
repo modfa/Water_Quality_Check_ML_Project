@@ -5,6 +5,11 @@
 
 (For more information read this dataset on Kaggle - https://www.kaggle.com/datasets/adityakadiwal/water-potability )
 
+**We used different Machine Learning algorithms(Logistic Regression, Decision Trees, Random Forest Classifier, Gradient Bossting Decision Trees etc to predict if the given water sample is potable or not? and also deploy that service to EC2 instance in Docker container**
+
+- Libaries/Language Used : Python3, Sklearn, Numpy, Pandas, Matplotlib, Seaborn, flask, gunicorn, pipenv etc
+- Technologies/Cloud : AWS cloud for workspace or/and Deployment 
+
 ### Content of the dataset 
 
 The water_potability.csv file contains water quality metrics for 3276 different water bodies.
