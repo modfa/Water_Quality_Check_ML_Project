@@ -117,6 +117,7 @@ Command to run the docker container
 5 ) `cd Water_Quality_Check_ML_Project`
 
 6 ) To build the image for running the container
+
         `docker build -t projectimage .`
         
 7 ) Command to run the docker container
@@ -125,6 +126,42 @@ Command to run the docker container
 8 ) Update the `predict_test.py` file and change it to localrun on local host/uncomment the line (read the file for more)
 
 9 ) Now run the python `predict_test.py` file from your local system using `python predict_test.py` and you will see the prediciton from the model which has been deployed on Docker Container on EC2
+
+
+-- Get the public IP of EC2 Instance
+
+![aws console](https://user-images.githubusercontent.com/32613450/200366783-398c6f91-a7f7-4cf9-b599-34e42c685190.png)
+
+-- SSH into the EC2 instance from local machine
+
+![ssh](https://user-images.githubusercontent.com/32613450/200366838-10025c3c-ed0b-4825-bac1-9e5e8f876e0b.png)
+
+-- Clone the github repository
+![git clone](https://user-images.githubusercontent.com/32613450/200366828-08138c83-78ca-4ddb-950a-fe7f0dabb615.png)
+
+-- Build The Docker Image for our project
+
+![docker image build](https://user-images.githubusercontent.com/32613450/200366805-f00f5b14-3b69-4591-b939-cb62ea044853.png)
+
+-- Check If the build image is present
+
+![check docker images](https://user-images.githubusercontent.com/32613450/200366800-0b7c6073-f13a-4437-b62d-f70c07eaeefe.png)
+
+-- Run the docker container
+
+![docker run](https://user-images.githubusercontent.com/32613450/200366816-0886f739-99a8-44cd-8143-a581c61e024d.png)
+
+--  Our Web Service is running successfully
+
+![docker run success](https://user-images.githubusercontent.com/32613450/200366821-8e3a6fc9-3007-4116-9865-7d0dbfba4ea8.png)
+
+-- Send the request to our web service running on AWS EC2/Docker Container
+
+![run predict_test_py](https://user-images.githubusercontent.com/32613450/200366836-967762e7-ebe4-4dcd-a856-09747623b443.png)
+
+-- We get the Successful response from opur web service running on AWS EC2 / Docker Container
+
+![success response](https://user-images.githubusercontent.com/32613450/200366842-0fe3994f-9b1d-427e-be75-e84faa50f70c.png)
 
 
 ###  Note: This repository include the `notebook.ipynb` , `train.py` , `predict.py` , `Dockerfile` etc if you want to explore the project in much more details.
